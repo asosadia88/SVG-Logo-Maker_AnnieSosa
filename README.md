@@ -11,9 +11,9 @@ N/A
 
 ## Usage
 
-Unleash your creativity with the SVG Logo Maker by clicking on the following link:
+Unleash your creativity with the SVG Logo Maker by opening with 
 
-[SVG Logo Maker](#insert_actual_link_here)
+Node index.js on Terminal 
 
 Upon entering the platform, you'll find a seamless environment to design and customize your unique logos. Here's a glimpse of the SVG Logo Maker in action:
 <img src="./images/SVGScreenshot.png" alt="SVG logo screenshot">
