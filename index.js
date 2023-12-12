@@ -30,3 +30,23 @@ const questions = [
         return 'Please enter a valid color (can be one of the basic keywords in https://developer.mozilla.org/en-US/docs/Web/CSS/named-color or a 6-digit valid hexadecimal number without the # sign.)';
     }
 },
+{
+    type: 'list',
+    name: 'shape',
+    message: 'What shape do you want for the logo?',
+    choices: ['Triangle', 'Square', 'Circle']
+},
+{
+    type: 'input',
+    name: 'shape_color',
+    message: 'What color do you want for the shape in the logo?',
+    validate(value){
+        // https://developer.mozilla.org/en-US/docs/Web/CSS/named-color
+        const color_strings = ['black','silver', 'gray', 'white', 'maroon', 'red', 'purple', 'fuchsia', 'green', 'lime', 'olive', 'yellow', 'navy', 'blue', 'teal', 'aqua'];
+        const pass = color_strings.includes(value) || (value.length == 6 && isAlphanumeric(value));
+        if(pass){
+            return true;
+        }
+        return 'Please enter a valid color (can be one of the basic keywords in https://developer.mozilla.org/en-US/docs/Web/CSS/named-color or a valid hexadecimal number without the # sign.)';
+    }
+}
