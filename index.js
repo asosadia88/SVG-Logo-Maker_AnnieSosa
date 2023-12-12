@@ -72,3 +72,36 @@ function handleData(data){
         circle.setTextColor(data.text_color);
         outputString = circle.render();
     }
+    if(data.shape === 'Triangle'){
+        var triangle = new Triangle();
+        triangle.setColor(data.shape_color);
+        triangle.setText(data.letters);
+        triangle.setTextColor(data.text_color);
+        outputString = triangle.render();
+    }
+    fs.writeFile('./examples/logo.svg', outputString, (err) => {
+        if(err){
+            console.log('Logo was not created successfully.');
+            throw err;
+        } else {
+            console.log('Generated logo.svg.');
+        }
+    });
+}
+
+function init() {
+    inquirer
+            .prompt(questions)
+        .then((answers) => {
+            handleData(answers);
+        })
+        .catch((error) => {
+            if (error.isTtyError) {
+                throw error;
+            } else {
+                console.log('There was an error handling data');
+            }
+        });
+}
+
+init();
