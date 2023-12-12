@@ -50,3 +50,25 @@ const questions = [
         return 'Please enter a valid color (can be one of the basic keywords in https://developer.mozilla.org/en-US/docs/Web/CSS/named-color or a valid hexadecimal number without the # sign.)';
     }
 }
+]
+// https://javascript.plainenglish.io/check-if-string-is-alphanumeric-in-javascript-e325caa3ee
+function isAlphanumeric(str) {
+    return /^[a-zA-Z0-9]+$/.test(str);
+}
+
+function handleData(data){
+    var outputString = '';
+    if(data.shape === 'Square'){
+        var square = new Square();
+        square.setColor(data.shape_color);
+        square.setText(data.letters);
+        square.setTextColor(data.text_color);
+        outputString = square.render();
+    }
+    if(data.shape === 'Circle'){
+        var circle = new Circle();
+        circle.setColor(data.shape_color);
+        circle.setText(data.letters);
+        circle.setTextColor(data.text_color);
+        outputString = circle.render();
+    }
