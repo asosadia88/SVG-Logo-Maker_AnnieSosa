@@ -16,7 +16,10 @@ Unleash your creativity with the SVG Logo Maker by clicking on the following lin
 [SVG Logo Maker](#insert_actual_link_here)
 
 Upon entering the platform, you'll find a seamless environment to design and customize your unique logos. Here's a glimpse of the SVG Logo Maker in action:
-![SVG Logo Maker Screenshot](#insert_screenshot_link_here)
+<img src="./images/SVGScreenshot.png" alt="SVG logo screenshot">
+
+Walkthrough link:
+https://drive.google.com/file/d/1FLL26jUOaTFqEPATVEYO7KeaYMzepwaM/view
 
 ## Credits
 
